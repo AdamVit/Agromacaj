@@ -1,0 +1,116 @@
+.contact-head {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    color: rgba(255,255,255, 1);
+    text-shadow: 0.5px 0.5px 0.7px midnightblue;
+    z-index: -1;
+	transform: translate(-50%, -50%);
+	width: 100%;
+    background: RGBA(220,159,11,0.3);
+    padding-bottom: 50px;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+div.col-lg-11 {
+	justify-content: space-evenly;
+}
+
+div.card {
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+
+div.card h5 {
+	color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+p.card-text {
+	font-weight: 700;
+    color:  rgb(255,255,255);
+    text-shadow: -1px 1px 1px black;
+}
+
+div.card-body hr {
+	width: 75%;
+    background-color: RGBA(255,255,255,0.5);
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+div.card-body a {
+	opacity: 1;
+	text-shadow: 1px 1px 1px black, -1px -1px 5px black;
+}
+
+div.row.text-center {
+	justify-content: center;
+	width: 100%;
+    margin: 0;
+	position: absolute;
+    top: 42%;
+	z-index: 0;
+}
+
+.card-body {
+	width: 250px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: contain;
+}
+
+.map {
+	position: relative;
+}
+
+.map-info {
+	width: 259px;
+    height: 241px;
+    position: absolute;
+    top: 25%;
+    left: 72%;
+    background: white;
+    padding: 20px;
+    border: rgba(26, 150, 98, 0.8) 2px solid;
+    box-shadow: 7px 7px 15px;
+}
+
+div.map-info a {
+	color: #007bff;
+	opacity: 1;
+}
+
+.start {
+	animation: boxmove 2500ms forwards;
+}
+
+@keyframes boxmove {
+	0% {
+		left: 100%;
+	}
+	
+	100% {
+		left: 72%;
+	} 
+}
+
+section.contact-end {
+	background:
+		url('https://images.unsplash.com/photo-1555952678-9da903a4cd5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') 
+		center/100% no-repeat;
+	padding: 0;
+}
+
+div.jumbotron h1 {
+	text-align: center;
+}
+
+div.jumbotron hr {
+	width: 100%;
+}

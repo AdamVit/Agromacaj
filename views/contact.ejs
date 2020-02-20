@@ -1,0 +1,125 @@
+<%- include("./partials/header") %>
+
+<section class="hero">
+	<div class="background-image" style='background-image: url("https://images.unsplash.com/photo-1529511582893-2d7e684dd128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80")'>		
+	</div>
+</section>
+<div class="contact-head">
+	<h1>Kontakt</h1>
+</div>
+
+<div class="row text-center">
+	<div class="col-lg-11 col-md-4 col-sm-6 mb-4 d-flex">
+		<div class="card">
+			<img src="https://www.zeleninarska.sk/wp-content/uploads/2019/07/marek-macaj.jpg" class="card-img-top" alt="Marek Macaj">
+			<div class="card-body">
+				<h5>Ing. Marek Macaj</h5>
+				<p class="card-text">Hlavný agronóm</p>
+				<hr>
+				<a href="tel:++421905732961">+421 905 732 961</a>
+				<a href="mailto:marek.macaj@agromacaj.sk">marek.macaj@agromacaj.sk</a>
+			</div>
+		</div>
+		<div class="card">
+			<img src="https://www.zeleninarska.sk/wp-content/uploads/2019/07/juraj-macaj.jpg" class="card-img-top" alt="Marek Macaj">
+			<div class="card-body">
+				<h5>Ing. Juraj Macaj</h5>
+				<p class="card-text">Predseda predstavenstva</p>
+				<hr>
+				<div>
+					<a href="tel:+421903256680">+421 903 256 680</a>
+					<a href="mailto:juraj.macaj@agromacaj.sk">juraj.macaj@agromacaj.sk</a>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<img src="https://www.zeleninarska.sk/wp-content/uploads/2019/10/miroslav-petruf.jpg" class="card-img-top" alt="Marek Macaj">
+			<div class="card-body">
+				<h5>Ing. Miroslav Petruf</h5>
+				<p class="card-text">Výrobný riaditeľ</p>
+				<hr>
+				<a href="tel:+421905785218">+421 905 785 218</a>
+				<a href="mailto:miroslav.petruf@zeleninarska.sk">miroslav.petruf@zeleninarska.sk </a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="map">
+	<img src="/pictures/agromacaj.png" alt="Agromacaj mapa" style="width: 100%">
+	<div class="map-info">
+		<h4>Agromačaj s. r. o</h4>
+		<p>Adresa: Kráľová pri Senci 455, 90050, Hlavná 455, 900 50 Kráľová pri Senci Telefón: 02/456 502 13</p>
+		<a href="https://goo.gl/maps/rXN29hkemY9k512fA" target="_blank">Google mapa</a>
+	</div>
+</div>
+
+<section class="contact-end">
+	<div class="jumbotron my-3">
+		<h1 class="display-4">Kontakt na spolocnost</h1>
+		<p class="lead">Pre kontaktovanie prosím použite formulár nižšie, alebo kontakty uvedené hore.</p>
+		<hr class="my-4">
+		<!-- Formular na zaslanie -->
+		<div class="col-sm-8 col-md-6 col-lg-6 m-auto">
+			<form action="/contacts" method="POST">
+				<div class="form-group">
+					<input class="form-control" type="text" name="name" placeholder="Vase meno" required> 
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="email" name="email" placeholder="Vas email" required> 
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="subject" placeholder="Predmet emailu">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" rows="4" cols="50" maxlength="300" name="description"
+							  placeholder="Sem zadajte text vasej spravy"></textarea>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Odoslat</button>
+				</div>
+			</form>				
+		</div>
+	</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+		crossorigin="anonymous">
+</script>
+
+<script>
+	<!-- Slide animation for map/div -->
+	function isElementInViewport(elem) {
+		var $elem = $(elem);
+		
+		// Get the scroll position of the page.
+		var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('animation') != -1) ? 'body' : 'html');
+		var viewportTop = $(scrollElem).scrollTop();
+		var viewportBottom = viewportTop + $(window).height();
+		
+		// Get the position of the element on the page.
+		var elemTop = Math.round( $elem.offset().top );
+		var elemBottom = elemTop + $elem.height();
+		
+		return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+	};
+
+	<!-- Check if it's time to start the animation -->
+	function checkAnimation() {
+		var $elem = $('.map-info');
+		
+		if (isElementInViewport($elem)) {
+			// Start the animation
+			$elem.addClass('start');
+		} else {
+			$elem.removeClass('start');
+		};
+	};
+
+	<!-- Capture scroll events -->
+	$(window).scroll(function(){
+		checkAnimation();
+	});
+</script>
+
+<%- include("./partials/footer") %>
