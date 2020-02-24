@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // routes
-app.get('/', (req, res) => res.render('homePage'));
+app.get('/', (req, res) => res.render('homePage', {scroll: "page"}));
 
-app.get('/contacts', (req, res) => res.render('contact'));
+app.get('/contacts', (req, res) => res.render('contact', {scroll: "page2"}));
 
 app.post('/contacts', (req, res) => {
 	let transporter = nodemailer.createTransport({

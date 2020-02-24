@@ -21,11 +21,16 @@ div.col-lg-11 {
 div.card {
 	border: none;
 	background-color: rgba(0,0,0,0);
+	transition: transform 350ms ease-in-out;
 }
 
 div.card h5 {
 	color: white;
     text-shadow: 2px 2px 2px black;
+}
+
+div.card:hover {
+	 transform: scale(1.2);
 }
 
 p.card-text {

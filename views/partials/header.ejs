@@ -37,7 +37,14 @@
 						   aria-haspopup="true" aria-expanded="false">Plodiny
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="#potatos">Zemiaky</a>
+							<a class="dropdown-item" 
+								<% if(scroll === "page") { %>
+									href="#potatos">
+								<% } else if(scroll === "page2") { %>
+									href="http://agromacaj-usnet.run.goorm.io/#potatos">
+								<% } %>
+								Zemiaky
+							</a>
 							<a class="dropdown-item" href="#onions">Cibula</a>
 							<a class="dropdown-item" href="#carrots">Mrkva</a>
 							<a class="dropdown-item" href="#garlics">Cesnak</a>
