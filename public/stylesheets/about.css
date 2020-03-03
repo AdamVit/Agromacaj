@@ -1,0 +1,40 @@
+.about-head {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    color: rgba(0,0,0, 0.7);
+    text-shadow: 2px 2px 2px white;
+    z-index: -1;
+	transform: translate(-50%, -50%);
+	width: 100%;
+    padding-bottom: 50px;
+    margin-top: 20px;
+    padding-top: 50px;
+}
+
+.value-content div {
+	width: 60px;
+    float: left;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+	background: #008C30;
+}
+
+.value-content p {
+	color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.value-content p.value-text {
+	float: right;
+	background: #fff;
+	color: #000;
+	border-radius: 0.25em;
+	text-align: justify;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}

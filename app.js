@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 // routes
 app.get('/', (req, res) => res.render('homePage', {scroll: "page"}));
 
+app.get('/about', (req, res) => res.render('aboutUs', {scroll: "page2"}));
+
 app.get('/contacts', (req, res) => res.render('contact', {scroll: "page2"}));
 
 app.post('/contacts', (req, res) => {

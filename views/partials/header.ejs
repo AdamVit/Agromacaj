@@ -27,7 +27,7 @@
 						<a class="nav-link" href="/">Domov <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">O nas</a>
+						<a class="nav-link" href="/about">O nas</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/contacts">Kontakt</a>
@@ -45,9 +45,30 @@
 								<% } %>
 								Zemiaky
 							</a>
-							<a class="dropdown-item" href="#onions">Cibula</a>
-							<a class="dropdown-item" href="#carrots">Mrkva</a>
-							<a class="dropdown-item" href="#garlics">Cesnak</a>
+							<a class="dropdown-item"
+								<% if(scroll === "page") { %>
+									href="#onions">
+								<% } else if(scroll === "page2") { %>
+									href="http://agromacaj-usnet.run.goorm.io/#onions">
+								<% } %>
+								Cibuľa
+							   </a>
+							<a class="dropdown-item"
+							   <% if(scroll === "page") { %>
+									href="#carrots">
+								<% } else if(scroll === "page2") { %>
+									href="http://agromacaj-usnet.run.goorm.io/#carrots">
+								<% } %>
+								Mrkva
+							</a>
+							<a class="dropdown-item"
+							   <% if(scroll === "page") { %>
+									href="#garlics">
+								<% } else if(scroll === "page2") { %>
+									href="http://agromacaj-usnet.run.goorm.io/#garlics">
+								<% } %>
+								Cesnak
+							   </a>
 						</div>
 					</li>
 				</ul>
